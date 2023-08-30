@@ -182,5 +182,9 @@ body {
 
 .footer {
     background-color: var(--main-color);
+
+}
+
+.footer .container {
     min-height: 80px;
 }
