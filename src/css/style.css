@@ -1,0 +1,186 @@
+:root {
+    --main-color: #0f505c;
+    --text-color: #F0F0F0;
+    --background-color: #DFD7DD;
+}
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: poppins 'sans-serif';
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .login-block .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+
+.nav ul {
+    flex: 1;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+    transition: all 0.5s;
+    color: var(--main-color);
+}
+
+.nav ul li a:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.nav ul li a::after {
+    position: absolute;
+    content: "";
+    right: 0%;
+    bottom: -5px;
+    width: 0%;
+    background-color: var(--main-color);
+    height: 5px;
+    transition: all 0.5s;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+    transform-origin: right;
+}
+
+.logo {
+    height: 80px;
+    cursor: pointer;
+}
+
+.main {
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 10px;
+}
+
+.main .search {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.main .search input {
+    width: 90%;
+    height: 20px;
+    padding: 22px;
+    border-radius: 300px;
+    outline: none;
+    border: none;
+}
+
+.main .search input[placeholder] {
+    color: var(--main-color);
+    /* font-style: italic; */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main .search i {
+    position: absolute;
+    right: 8%;
+    font-size: 20px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.main .libraries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.main .libraries .library {
+    padding: 20px 10px;
+    background-color: var(--text-color);
+    text-align: center;
+    box-shadow: 0px 10px 27px -3px rgba(0, 0, 0, 0.1);
+}
+
+.main .libraries .library .library-img {
+    max-width: 100%;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.main .libraries .library .library-img:hover {
+    filter: grayscale(0);
+}
+
+.main .libraries .library .library-title {
+    width: 100%;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.main .libraries .library span {
+    background-color: var(--background-color);
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 20px;
+    text-transform: lowercase;
+    color: var(--main-color);
+    opacity: 0.5;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.footer {
+    background-color: var(--main-color);
+    min-height: 80px;
+}
