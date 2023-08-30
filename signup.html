@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        .title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.9;
+        }
+
+        .signup {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid var(--main-color); */
+        }
+
+
+        .signup-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            align-content: center;
+            padding: 1rem;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="password"],
+        .signup-form input[type="email"] {
+            width: 80%;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            padding: 20px;
+            text-transform: capitalize;
+
+        }
+
+        .signup-img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0%;
+        }
+
+        @media (max-width: 768px) {
+            .signup {
+                grid-template-columns: 1fr;
+            }
+
+            .signup-form {
+                order: 2;
+            }
+        }
+    </style>
+    <title>signup TO LIBRARY</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="src/img/logo.svg" alt="logo" class="logo">
+            <nav class="nav">
+                <ul style="text-align: right;">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#home">English</a></li>
+                    <li><a href="#home">Arabic</a></li>
+                    <li><a href="#home">French</a></li>
+                    <li><a href="#home">Allemande</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <h4 class="title">sign up to library</h4>
+            <div class="signup">
+                <form action="" method="post" class="signup-form">
+                    <input type="text" name="username" id="username" class="username" required placeholder="username">
+                    <input type="email" name="email" id="email" class="email" required placeholder="email">
+                    <input type="password" name="password" id="password" class="password" required
+                        placeholder="password">
+                    <input type="password" name="re-password" id="re-password" class="password" required
+                        placeholder="Re-type password">
+
+                    <input type="submit" value="signup" class="btn"
+                        style="outline: none ; border: none;border-radius:0px; width:80%; margin: auto;margin-bottom:10px;height: 40px;">
+                    <span class="login" style="width: 80%; margin: auto;opacity: .9; font-style: oblique;">You didn't
+                        have an account yet ? <a href="./login.html"
+                            style="opacity: 1; font-style: normal;">login</a></span>
+                </form>
+                <img src="src/img/login.png" alt="signup image " class="signup-img">
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
