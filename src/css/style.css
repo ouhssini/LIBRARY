@@ -21,6 +21,7 @@ html {
 
 body {
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 .container {
@@ -39,6 +40,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s ease-out;
 }
 
 .btn {
@@ -96,17 +98,32 @@ body {
     cursor: pointer;
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 20px;
+}
+
+.menu-icon:hover {
+    color: var(--main-color);
+
+}
+
 /* 
 media queries for nav 
 */
 @media (max-width: 768px) {
+    .menu-icon {
+        display: inline-block;
+    }
+
     .nav {
         display: inline-block;
-        position: absolute;
-        left: 0;
+        position: fixed;
+        left: -100%;
         top: 0;
         flex-direction: column;
-
         background-color: rgb(28, 28, 28);
         min-height: 100vh;
         width: 50%;
