@@ -1,6 +1,5 @@
 :root {
     --main-color: #273746;
-    /* #273746 */
     --text-color: #F0F0F0;
     --background-color: #DFD7DD;
 }
@@ -13,6 +12,7 @@
     font-family: poppins 'sans-serif';
     list-style: none;
     text-decoration: none;
+    transition: all 0.5s;
 }
 
 html {
@@ -52,6 +52,10 @@ body {
     text-align: center;
     cursor: pointer;
     border-radius: 100px;
+}
+
+.btn:hover {
+    background-color: #162029;
 }
 
 .nav ul {
